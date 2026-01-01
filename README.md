@@ -13,19 +13,6 @@ This project is designed from an instructor’s point of view and focuses on ans
 
 The analytics are presented through a dashboard built using Streamlit and Plotly.
 
-# Project Structure
-
-instructor-classroom-analysis/
-│
-├── data/
-│ ├── classroom_posts.csv
-│ ├── student_submissions.csv
-│ └── students.csv
-│
-├── analysis.py 
-├── dashboard.py
-└── README.md
-
 # Key Features
 
 # Instructor Activity Analysis
@@ -54,4 +41,5 @@ instructor-classroom-analysis/
 - Pandas – data processing
 - Streamlit– dashboard framework
 - Plotly – for visualizations
+
 
