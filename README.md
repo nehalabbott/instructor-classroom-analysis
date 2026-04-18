@@ -1,13 +1,10 @@
-Here’s a **clean, GitHub-quality README** version of your content — properly formatted, consistent headings, code blocks, and more professional structure 👇
 
----
 
 # 📊 Instructor Classroom Analytics Dashboard
 
 An instructor-oriented analytics project that analyzes classroom activity and student engagement across multiple courses.
 The project provides insights into teaching workload, student participation trends, and assignment difficulty using structured classroom data.
 
----
 
 ## 🚀 Project Overview
 
@@ -20,7 +17,6 @@ This project is designed from an instructor’s perspective and focuses on answe
 
 All analytics are presented through an interactive dashboard built using **Streamlit** and **Plotly**.
 
----
 
 ## ✨ Key Features
 
@@ -49,7 +45,7 @@ All analytics are presented through an interactive dashboard built using **Strea
 * Ranking of hardest assignments
 * Course-wise filtering
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -58,7 +54,7 @@ All analytics are presented through an interactive dashboard built using **Strea
 * **Streamlit** – dashboard framework
 * **Plotly** – interactive visualizations
 
----
+
 
 ## ⚙️ How to Run
 
