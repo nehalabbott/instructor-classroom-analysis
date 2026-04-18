@@ -41,5 +41,31 @@ The analytics are presented through a dashboard built using Streamlit and Plotly
 - Pandas – data processing
 - Streamlit– dashboard framework
 - Plotly – for visualizations
+  
+# How to Run
+1. Clone the Repository
+git clone https://github.com/your-username/instructor-classroom-analytics.git
+cd instructor-classroom-analytics
+2. Create a Virtual Environment 
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+3. Install Dependencies
+pip install pandas streamlit plotly
+
+4. Run the Application
+streamlit run app.py
+6. Open in Browser
+
+Once the app starts, it will automatically open in your browser.
+
+6. Provide Dataset
+Place your dataset file(s) inside the project directory (e.g., data/)
+Ensure the file format matches the expected schema used in the code
 
 
