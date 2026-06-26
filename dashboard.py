@@ -9,26 +9,23 @@ MONTH_ORDER = [
     "September", "October", "November", "December"
 ]
 
-#Page config
-
 st.set_page_config(
     page_title="Instructor Classroom Dashboard",
     layout="wide"
 )
 
-st.title("Instructor Classroom Analytics Dashboard")
+st.title("Your Classroom Dashboard")
 
-# Load data
+#load data
 posts = pd.read_csv("data/classroom_post.csv")
 submissions = pd.read_csv("data/student_submissions.csv")
 
+#conversion
 posts["post_date"] = pd.to_datetime(posts["post_date"])
 submissions["submit_date"] = pd.to_datetime(submissions["submit_date"])
-
 posts["month"] = posts["post_date"].dt.month_name()
 submissions["month"] = submissions["submit_date"].dt.month_name()
 
-#Sidebar
 course = st.sidebar.selectbox(
     "Select Course",
     sorted(posts["class_id"].unique())
@@ -37,7 +34,7 @@ course = st.sidebar.selectbox(
 course_posts = posts[posts["class_id"] == course]
 course_subs = submissions[submissions["class_id"] == course]
 
-# KPI CARDS (Top Row)
+#KPI cards
 total_assignments = course_posts[course_posts["post_type"] == "assignment"].shape[0]
 total_announcements = course_posts[course_posts["post_type"] == "announcement"].shape[0]
 total_submissions = course_subs.shape[0]
@@ -48,7 +45,7 @@ kpi1.metric("Assignments Posted", total_assignments)
 kpi2.metric("Announcements Posted", total_announcements)
 kpi3.metric("Total Submissions", total_submissions)
 
-# Instructor Activity Trend
+
 monthly_posts = (
     course_posts.groupby("month")
     .size()
@@ -63,12 +60,11 @@ fig_posts = px.line(
     x="month",
     y="posts",
     markers=True,
-    title="Monthly Instructor Activity",
+    title="Your Monthly Activity",
 )
 
 st.plotly_chart(fig_posts, use_container_width=True)
 
-#Student Engagement Trend
 monthly_subs = (
     course_subs.groupby("month")
     .size()
@@ -83,13 +79,12 @@ fig_subs = px.line(
     x="month",
     y="submissions",
     markers=True,
-    title="Student Engagement Trend",
+    title="Student Engagement",
 )
 
 st.plotly_chart(fig_subs, use_container_width=True)
 
-#Assignment Difficulty
-st.subheader("Assignment Difficulty Analysis")
+st.subheader("How difficult were the assignments you made??")
 
 assignment_stats = (
     course_subs
@@ -114,22 +109,20 @@ fig_diff = px.bar(
     x="difficulty_score",
     y="assignment_id",
     orientation="h",
-    title="Assignment Difficulty Ranking"
+    title="Difficulty Ranking"
 )
 
 st.plotly_chart(fig_diff, use_container_width=True)
 
-#Key Insight
-
 hardest = assignment_stats.sort_values("difficulty_score", ascending=False).iloc[0]
 
 st.success(
-    f"Hardest Assignment: {hardest['assignment_id']}  |  "
-    f"Avg Marks: {hardest['avg_marks']:.2f}  |  "
-    f"Submissions: {int(hardest['submissions'])}"
+    f"Hardest Assignment Goes to... {hardest['assignment_id']}  |  "
+    f" The average marks scored in it were..{hardest['avg_marks']:.2f}  |  "
+    f" No. of students who dared to submit it were..{int(hardest['submissions'])} students"
 )
 
-st.subheader("Key Insights")
+st.subheader("Insights")
 
 instructor_monthly = (
     course_posts.groupby("month")

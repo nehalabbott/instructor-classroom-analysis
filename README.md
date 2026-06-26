@@ -91,24 +91,6 @@ python -m streamlit run dashboard.py
 
 ---
 
-### 5. Open in Browser
-
-The app will automatically open in your browser.
-If not, visit:
-
-```
-http://localhost:8502
-```
-
----
-
-### 6. Dataset Setup
-
-* Place dataset files inside the `data/` folder
-* Ensure the schema matches what `analysis.py` expects
-
----
-
 ## Project Structure
 
 ```
