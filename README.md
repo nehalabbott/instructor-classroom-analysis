@@ -1,12 +1,10 @@
 
 
-# 📊 Instructor Classroom Analytics Dashboard
+# Instructor Classroom Analytics Dashboard
 
 An instructor-oriented analytics project that analyzes classroom activity and student engagement across multiple courses.
-The project provides insights into teaching workload, student participation trends, and assignment difficulty using structured classroom data.
 
-
-## 🚀 Project Overview
+## Project Overview
 
 This project is designed from an instructor’s perspective and focuses on answering questions such as *(similar to Spotify Wrapped)*:
 
@@ -14,38 +12,6 @@ This project is designed from an instructor’s perspective and focuses on answe
 * During which months was teaching activity the highest?
 * When were students most active?
 * Which assignments were the most challenging for students?
-
-All analytics are presented through an interactive dashboard built using **Streamlit** and **Plotly**.
-
-
-## ✨ Key Features
-
-### 📌 Instructor Activity Analysis
-
-* Total assignments and announcements posted per course
-* Monthly teaching workload trends
-
-### 📈 Student Engagement Analysis
-
-* Monthly submission patterns
-* Identification of peak and low engagement periods
-
-### 🧠 Assignment Difficulty Analysis
-
-* Difficulty score based on:
-
-  * Average marks
-  * Number of student submissions
-* Handles edge cases (ties, uniform values)
-
-### 📊 Dashboard Visualization
-
-* KPI cards for quick insights
-* Interactive trend visualizations
-* Ranking of hardest assignments
-* Course-wise filtering
-
-
 
 ## 🛠️ Tech Stack
 
@@ -55,8 +21,28 @@ All analytics are presented through an interactive dashboard built using **Strea
 * **Plotly** – interactive visualizations
 
 
+## Key Features
 
-## ⚙️ How to Run
+### Instructor Activity Analysis
+
+* Total assignments and announcements posted per course
+* Monthly teaching workload trends
+
+### Student Engagement Analysis
+
+* Monthly submission patterns
+* Identification of peak and low engagement periods
+
+### Assignment Difficulty Analysis
+
+* Difficulty score based on:
+
+  * Average marks
+  * Number of student submissions
+* Handles edge cases (ties, uniform values)
+
+
+## How to Run
 
 ### 1. Clone the Repository
 
@@ -65,7 +51,7 @@ git clone https://github.com/your-username/instructor-classroom-analytics.git
 cd instructor-classroom-analytics
 ```
 
-### 2. Create a Virtual Environment (Recommended)
+### 2. Create a Virtual Environment
 
 **Windows**
 
@@ -123,7 +109,7 @@ http://localhost:8502
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 instructor-classroom-analytics/
@@ -133,10 +119,9 @@ instructor-classroom-analytics/
 │── README.md
 ```
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * Integrate **Google Classroom API** instead of static CSV data
-* Add **AI-driven insights** for instructors and students
 * Build a **student-facing dashboard interface**
 
 
