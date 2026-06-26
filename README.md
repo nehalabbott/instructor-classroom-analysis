@@ -13,7 +13,7 @@ This project is designed from an instructor’s perspective and focuses on answe
 * When were students most active?
 * Which assignments were the most challenging for students?
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Python**
 * **Pandas** – data processing
